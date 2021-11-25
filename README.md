@@ -1,6 +1,6 @@
 # X25519 NIST SP800-186
 X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It allows two parties to jointly agree on a shared secret using an insecure channel. 
-### X25519 Tool
+### X25519 ECDH Tool:
 <pre>Usage of x25519:
   -derive
         Derive shared secret key.
@@ -11,7 +11,7 @@ X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It all
   -pub string
         Remote's side Public key.</pre>
 
-### Examples
+### Examples:
 ```sh
 ./x25519 -keygen // 2x
 ./x25519 -derive -key $2ndprivatekey -pub $1stpublickey
