@@ -14,11 +14,7 @@ X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It all
 ### Examples
 ```sh
 ./x25519 -keygen // 2x
-```
-```sh
 ./x25519 -derive -key $2stprivatekey -pub $1stpublickey
-```
-```sh
 ./x25519 -derive -key $1stprivatekey -pub $2stpublickey
 ```
 ## License
