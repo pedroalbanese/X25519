@@ -1,4 +1,10 @@
 # X25519 NIST SP800-186
+[![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/pedroalbanese/X25519/blob/master/LICENSE.md) 
+[![GoDoc](https://godoc.org/github.com/pedroalbanese/X25519?status.png)](http://godoc.org/github.com/pedroalbanese/X25519)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pedroalbanese/X25519)](https://goreportcard.com/report/github.com/pedroalbanese/X25519)
+[![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/pedroalbanese/X25519)](https://golang.org)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/pedroalbanese/X25519)](https://github.com/pedroalbanese/X25519/releases)
+
 X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It allows two parties to jointly agree on a shared secret using an insecure channel. 
 ### X25519 ECDH Tool:
 <pre>Usage of x25519:
