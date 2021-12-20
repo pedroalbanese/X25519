@@ -13,7 +13,6 @@ import (
 )
 
 var (
-	derive = flag.Bool("derive", false, "Derive shared secret key.")
 	key    = flag.String("key", "", "Private key.")
 	keygen = flag.Bool("keygen", false, "Generate ed25519 asymmetric keypair.")
 	public = flag.String("pub", "", "Remote's side Public key.")
@@ -43,31 +42,29 @@ func main() {
 		os.Exit(0)
 	}
 
-	if *derive {
-		privatekey, err := hex.DecodeString(*key)
-		if err != nil {
-			log.Fatal(err)
-		}
-		if len(privatekey) != 32 {
-			log.Fatal("curve25519: bad private key length.")
-			os.Exit(1)
-		}
-		publickey, err := hex.DecodeString(*public)
-		if err != nil {
-			log.Fatal(err)
-		}
-
-		var privateKey [32]byte
-		copy(privateKey[:], []byte(privatekey))
-		var publicKey [32]byte
-		copy(publicKey[:], []byte(publickey))
-
-		var secret []byte
-		secret = GenerateSharedSecret(privateKey, publicKey)
-
-		fmt.Printf("Shared= %x\n", secret)
-		os.Exit(0)
+	privatekey, err := hex.DecodeString(*key)
+	if err != nil {
+		log.Fatal(err)
 	}
+	if len(privatekey) != 32 {
+		log.Fatal("curve25519: bad private key length.")
+		os.Exit(1)
+	}
+	publickey, err := hex.DecodeString(*public)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var privateKey [32]byte
+	copy(privateKey[:], []byte(privatekey))
+	var publicKey [32]byte
+	copy(publicKey[:], []byte(publickey))
+
+	var secret []byte
+	secret = GenerateSharedSecret(privateKey, publicKey)
+
+	fmt.Printf("Shared= %x\n", secret)
+	os.Exit(0)
 }
 
 func GenerateKey() (privateKey *[32]byte, publicKey *[32]byte, err error) {
