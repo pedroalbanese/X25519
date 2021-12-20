@@ -8,8 +8,6 @@
 X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It allows two parties to jointly agree on a shared secret using an insecure channel.
 ### Command-line X25519 Diffie-Hellman Tool:
 <pre>Usage of x25519:
-  -derive
-        Derive shared secret key.
   -key string
         Private key.
   -keygen
@@ -20,8 +18,8 @@ X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It all
 ### Examples:
 ```sh
 ./x25519 -keygen // 2x
-./x25519 -derive -key $2ndprivatekey -pub $1stpublickey
-./x25519 -derive -key $1stprivatekey -pub $2ndpublickey
+./x25519 -key $2ndprivatekey -pub $1stpublickey
+./x25519 -key $1stprivatekey -pub $2ndpublickey
 ```
 ## License
 This project is licensed under the ISC License.
