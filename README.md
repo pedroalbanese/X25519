@@ -1,5 +1,6 @@
 # X25519 NIST SP800-186
-[![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/pedroalbanese/X25519/blob/master/LICENSE.md) 
+[![ISC License](http://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/pedroalbanese/X25519/blob/master/LICENSE.md)
+[![GitHub downloads](https://img.shields.io/github/downloads/pedroalbanese/X25519/total.svg?logo=github&logoColor=white)](https://github.com/pedroalbanese/X25519/releases)
 [![GoDoc](https://godoc.org/github.com/pedroalbanese/X25519?status.png)](http://godoc.org/github.com/pedroalbanese/X25519)
 [![Go Report Card](https://goreportcard.com/badge/github.com/pedroalbanese/X25519)](https://goreportcard.com/report/github.com/pedroalbanese/X25519)
 [![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/pedroalbanese/X25519)](https://golang.org)
