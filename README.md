@@ -7,6 +7,31 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/pedroalbanese/X25519)](https://github.com/pedroalbanese/X25519/releases)
 
 X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It allows two parties to jointly agree on a shared secret using an insecure channel.
+
+```
+           Alice                         Bob
+           -----                         ---
+       choose private key          choose private key
+             d_A                         d_B
+              |                           |
+              v                           v
+        compute public key:        compute public key:
+  Q_A = d_A * BasePoint_Mont   Q_B = d_B * BasePoint_Mont
+              |                           |
+              v                           v
+           ----- Begin Key Exchange Phase -----
+              |                           |
+              v                           v
+        compute shared secret:     compute shared secret:
+ S_A = Montgomery(Q_B * d_A)   S_B = Montgomery(Q_A * d_B)
+              |                           |
+              v                           v
+            ----- End Key Exchange Phase -----
+              |                           |
+              v                           |
+            (S_A)                       (S_B)
+```
+
 ### Command-line X25519 Diffie-Hellman Tool:
 <pre>Usage of x25519:
   -key string
