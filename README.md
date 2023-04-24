@@ -9,8 +9,8 @@
 X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It allows two parties to jointly agree on a shared secret using an insecure channel.
 
 ```
-           Alice                         Bob
-           -----                         ---
+            Alice                        Bob
+            -----                        ---
        choose private key          choose private key
              d_A                         d_B
               |                           |
