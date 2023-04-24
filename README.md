@@ -37,7 +37,7 @@ X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It all
   -key string
         Private key.
   -keygen
-        Generate ed25519 asymmetric keypair.
+        Generate X25519 asymmetric keypair.
   -pub string
         Remote's side Public key.</pre>
 
