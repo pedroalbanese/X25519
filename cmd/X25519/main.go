@@ -14,7 +14,7 @@ import (
 
 var (
 	key    = flag.String("key", "", "Private key.")
-	keygen = flag.Bool("keygen", false, "Generate ed25519 asymmetric keypair.")
+	keygen = flag.Bool("keygen", false, "Generate X25519 asymmetric keypair.")
 	public = flag.String("pub", "", "Remote's side Public key.")
 )
 
