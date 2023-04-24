@@ -15,14 +15,14 @@ X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It all
              d_A                         d_B
               |                           |
               v                           v
-        compute public key:        compute public key:
+       compute public key:        compute public key:
   Q_A = d_A * BasePoint_Mont   Q_B = d_B * BasePoint_Mont
               |                           |
               v                           v
            ----- Begin Key Exchange Phase -----
               |                           |
               v                           v
-        compute shared secret:     compute shared secret:
+     compute shared secret:     compute shared secret:
  S_A = Montgomery(Q_B * d_A)   S_B = Montgomery(Q_A * d_B)
               |                           |
               v                           v
