@@ -11,7 +11,7 @@ X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It all
 ```
             Alice                        Bob
             -----                        ---
-       choose private key          choose private key
+       choose private key:        choose private key:
              d_A                         d_B
               |                           |
               v                           v
@@ -22,13 +22,13 @@ X25519 is an elliptic curve Diffie-Hellman key exchange using Curve25519. It all
            ----- Begin Key Exchange Phase -----
               |                           |
               v                           v
-     compute shared secret:     compute shared secret:
- S_A = Montgomery(Q_B * d_A)   S_B = Montgomery(Q_A * d_B)
+      compute shared secret:     compute shared secret:
+  S_A = Montgomery(Q_B * d_A)  S_B = Montgomery(Q_A * d_B)
               |                           |
               v                           v
             ----- End Key Exchange Phase -----
               |                           |
-              v                           |
+              v                           v
             (S_A)                       (S_B)
 ```
 
